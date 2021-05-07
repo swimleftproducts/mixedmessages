@@ -12,7 +12,13 @@ if (user === compGenString) {
     return " you're close keep going"
 )
 // generate mixedmessages object that has 3 properties (location) (name) (weapon) and various methods
-
+const messageFactory = () => {
+    return str = {
+        location,
+        name,
+        weapon,
+    }
+}
 
 // property Location 
 

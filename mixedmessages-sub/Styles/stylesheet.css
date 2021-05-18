@@ -90,11 +90,13 @@ li {
     -o-border-radius: 3rem;
 }
 
+/*
+comented out to work on getting hover right
 li:hover {
     border-color: black;
     color: white;
 }
-
+*/
 
 
 li button {
@@ -117,11 +119,12 @@ button {
     border: none;
     cursor: pointer;
 }
-
+/*
 button:hover {
     background-color: white;
     color: black;
 }
+*/
 
 .vignette {
     width: 100%;

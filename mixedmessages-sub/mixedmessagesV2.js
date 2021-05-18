@@ -1,87 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <!-- TypeFace -->
-        <link rel="preconnect" href="https://fonts.gstatic.com"> 
-        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Nosifer&display=swap" rel="stylesheet"><link href="./styles/stylesheet.css" rel="stylesheet" type="text/css">
-        <!-- JavaScript files-->
-        <script src="mixedmessagesV2.js"></script> 
-    </head>
-    <body>
-        <div class="bg-img"><img src="./Styles/Images/tv_background.png">
-        <div class="main-content">
-            <header><h1>The Star killer</h1></header>
-            <p></br>We are here for a fun game. Pull up the console
-            and get ready to play <br> type in <strong> whodidit._guess.([name],[weapon]
-            ,[location])</strong> and see what happens.</p>
+// We will create a program that takes in 3 guesse [name] [weapon] [location] from user 
+// And then check if user guess matches computer generated strings
+takeUserInput("adam","claws","car")
+function takeUserInput(name,weapon,location) {
+    //build array from user input
+    const userString = buildUserString(name,weapon,location);
+    //build random computer array from function
+    const compString = generateRandomString();
 
-            <div class="list-of-leads">
-                <h3>Here is the list of leads we got from the police</h3>
-                <p>Select one for each category</p>
-            </div>
-            
-            <div class="leads">
+    //use .join to create single word from each array built above for easy comparison
+    let userForTest = makeArrayOneWord(userString)
+    let compForTest = makeArrayOneWord(compString)
+    // check if user and computer strings  matches
+    console.log(userForTest)
+    console.log(compForTest)
 
-                <div class="names">
-                    <h4>Names</h4>
-                    <ul>
-                        <li><button id="adam">Adam</button></li>
-                        <li><button id="bard">Bard</button></li>
-                        <li><button id="biff">Biff</button></li>
-                        <li><button id="hazel">Hazel</button></li>
-                        <li><button id="ray">Ray</button></li>
-                    </ul>
-                </div>
-                <div class="weapons">
-                    <h4>Weapons</h4>
-                    <ul>
-                        <li><button id="gauntlet">Gauntlet</button></li>
-                        <li><button id="claws">Claws</button></li>
-                        <li><button id="lightSaber">LightSaber</button></li>
-                        <li><button id="fork">Fork</button></li>
-                        <li><button id="pistol">Pistol</button></li>
-                    </ul>
-                </div>
-                <div class="locations">
-                    <h4>Locations</h4>
-                    <ul>
-                        <li><button id="restaurant">Restaurant</button></li>
-                        <li><button id="beachside">Beachside</button></li>
-                        <li><button id="apartment101">Apartment 101</button></li>
-                        <li><button id="queenJet">QueenJet</button></li>
-                        <li><button id="car">Car</button></li>
-                    </ul>
-                </div>
+    let outcome = checkUserInput(userForTest,compForTest);
+    // output result 
+    finalToDo(outcome);
+    
+};
+// This is the list of [names] for the killer
+//const names=['adam', 'barb', 'biff', 'hazel', 'ray']
+// This is the list of [weapon]
+//const weapons=['gauntlet', 'claws', 'lightSaber', 'fork', 'pistol']
+// This is the list of [location]
+//const locations=['restaurant', 'beachside', 'apartment101', 'queenJet', 'car']
+//*removed
 
-            </div>
-            <!--
-                <p>
-                names: ['adam', 'barb', 'biff', 'hazel', 'ray']<br>
-                weapons: ['gauntlet', 'claws', 'lightSaber', 'fork', 'pistol']<br>
-                location: ['restaurant', 'beachside', 'apartment101', 'queenJet', 'car']<br></p>
-            
-                <p>Name:  <input type="text" name="" id="nameIn"><br></p>
-                <p>Name:  <input type="text" name="" id="weaponIn"><br></p>
-                <p>Name:  <input type="text" name="" id="locationIn"><br></p>
-            -->
-            <button onclick="takeUserInput('adam', 'claws', 'car')"> Let's Play!</button>
+// This function is a randomizer for choosing the computer generated string [name] [weapon], [location]
+function generateRandomString(){
+    const names = ['adam', 'barb', 'biff', 'hazel', 'ray'];
+    const weapons = ['gauntlet', 'claws', 'lightSaber', 'fork', 'pistol'];
+    const locations = ['restaurant', 'beachside', 'apartment101', 'queenJet', 'car'];
+    compString = [];
+    compString.push(names[Math.floor(Math.random()*names.length)]);
+    compString.push(weapons[Math.floor(Math.random()*weapons.length)]);
+    compString.push(locations[Math.floor(Math.random()*locations.length)]);
+    return compString
+}
 
-            <div id="results"></div> 
-        </div>
-        <div class="vignette"></div>
+// user
+function buildUserString(name1,weapon2,location3){
+    let array = [];
+    array[0] = name1;
+    array[1] = weapon2;
+    array[2] = location3;
+    return array
+}
 
+// this makes compStrin Array and buildUserString Array to a single string for easy comparison
+// I think arr.join('') oksy
+// we will need to fix the logic up top
 
-        <!-- JavaScript Animation -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
-        <script src="./Styles/app.js"></script>
-    </body>
-</html>
- <!-- I just realized that the 'whodidit._guess' is one variable
+function makeArrayOneWord(array) {
+    return array.join('');
+};
 
-let me just check with chrome
-ahh I see got it
--->
+// this compares the user generated string and computer generated string if it matches
+//
+
+function checkUserInput(userString,compString) {
+    if(userString === compString) {
+        return true
+    }else{
+        return false;  
+    }   
+}
+
+// if user and computer matches, user wins and prints ("congratulations you win the game",  etc) + the computer generated string
+// else user lose and prints ("too bad killer got away", etc.) + computer generated strings.
+
+function finalToDo(outcome){
+//if true, user win
+    if(outcome) {
+        console.log("congratulations you win the game "+ compString[0] +" " +compString[1] +" " +compString[2] )
+    } else {
+        console.log("to bad killer got away"+ compString[0] +" " +compString[1] +" " +compString[2] )
+    }
+}

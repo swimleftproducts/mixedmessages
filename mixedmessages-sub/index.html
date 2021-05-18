@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- TypeFace -->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Nosifer&display=swap" rel="stylesheet"><link href="./styles/stylesheet.css" rel="stylesheet" type="text/css">
+        <!-- JavaScript files
+        <script src="mixedmessagesV2.js"></script> 
+        <script src="Styles/app.js"></script>
+        -->
+    </head>
+    <body>
+        <div class="bg-img"><img src="./Styles/Images/tv_background.png">
+        <div class="main-content">
+            <header><h1>The Star killer</h1></header>
+            <p></br>We are here for a fun game. Pull up the console
+            and get ready to play <br> type in <strong> whodidit._guess.([name],[weapon]
+            ,[location])</strong> and see what happens.</p>
+
+            <div class="list-of-leads">
+                <h3>Here is the list of leads we got from the police</h3>
+                <p>Select one for each category</p>
+            </div>
+            
+            <div class="leads">
+
+                <div class="names">
+                    <h4>Names</h4>
+                    <ul>
+                        <li><button id="adam" onClick="btnclick(this.id)" class="nameButton">Adam</button></li>
+                        <li><button id="bard" onClick="btnclick(this.id)" class="nameButton">Bard</button></li>
+                        <li><button id="biff" onClick="btnclick(this.id)" class="nameButton">Biff</button></li>
+                        <li><button id="hazel" onClick="btnclick(this.id)" class="nameButton">Hazel</button></li>
+                        <li><button id="ray" onClick="btnclick(this.id)" class="nameButton">Ray</button></li>
+                    </ul>
+                </div>
+                <div class="weapons">
+                    <h4>Weapons</h4>
+                    <ul>
+                        <li><button id="gauntlet" onClick="btnclick(this.id)" class="nameButton">Gauntlet</button></li>
+                        <li><button id="claws">Claws</button></li>
+                        <li><button id="lightSaber">LightSaber</button></li>
+                        <li><button id="fork">Fork</button></li>
+                        <li><button id="pistol">Pistol</button></li>
+                    </ul>
+                </div>
+                <div class="locations">
+                    <h4>Locations</h4>
+                    <ul>
+                        <li><button id="restaurant">Restaurant</button></li>
+                        <li><button id="beachside">Beachside</button></li>
+                        <li><button id="apartment101">Apartment 101</button></li>
+                        <li><button id="queenJet">QueenJet</button></li>
+                        <li><button id="car">Car</button></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!--
+                <p>
+                names: ['adam', 'barb', 'biff', 'hazel', 'ray']<br>
+                weapons: ['gauntlet', 'claws', 'lightSaber', 'fork', 'pistol']<br>
+                location: ['restaurant', 'beachside', 'apartment101', 'queenJet', 'car']<br></p>
+            
+                <p>Name:  <input type="text" name="" id="nameIn"><br></p>
+                <p>Name:  <input type="text" name="" id="weaponIn"><br></p>
+                <p>Name:  <input type="text" name="" id="locationIn"><br></p>
+            -->
+            <button onclick="takeUserInput('adam', 'claws', 'car')"> Let's Play!</button>
+
+            <div id="results"></div> 
+        </div>
+        <div class="vignette"></div>
+
+
+        <!-- JavaScript Animation -->
+        <script src="Styles/app.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            
+            /*
+            let adamButton = document.getElementsById('adam');
+                //blueElement.style.backgroundColor = 'white';
+                alert("hello")
+                
+            adamButton.onclick = changeBackground();
+                
+                
+            function changeBackground() {
+                    //adamButton.style.backgroundColor ="white"
+                    alert("hello")
+            }
+            
+            document.getElementById("ray").onclick = function() {
+                //alert("button clicked")
+                document.getElementById("ray").style.backgroundColor = "white";
+                document.getElementById("ray").style.color = "black";
+
+            }
+            document.getElementById("adam").onclick = function() {
+                //alert("button clicked")
+                document.getElementById("adam").style.backgroundColor = "white";
+                document.getElementById("adam").style.color = "black";
+
+            }
+
+            document.button.onclick = function() {
+                document.button.style.backgroundColor = "white";
+                document.button.style.color = "black"
+            }
+            */
+        </script>
+    </body>
+</html>
+ <!-- I just realized that the 'whodidit._guess' is one variable
+
+let me just check with chrome
+ahh I see got it
+-->

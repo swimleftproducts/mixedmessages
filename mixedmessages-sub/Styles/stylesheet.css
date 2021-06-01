@@ -1,26 +1,33 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     background-color: black;
     font-family: 'Courier Prime', monospace;
-
 }
 
+body {
+    background-color: black;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
 /* TypeFace */
+
+
 /*
 font-family: 'Courier Prime', monospace; Regular & Bold
 font-family: 'Nosifer', cursive; Regular
 */
 
-.bg-img img{
+.bg-img img {
     width: 100%;
     position: fixed;
-    z-index: -1;
     opacity: .7;
     margin-left: .43%;
-    ;
 }
+
 .main-content {
     position: absolute;
     /*border: solid .5rem red;*/
@@ -28,19 +35,22 @@ font-family: 'Nosifer', cursive; Regular
     color: white;
     overflow: scroll;
     width: 60%;
-    height: 75vh;
+    height: 65%;
     margin-top: 8%;
     margin-left: 11.5%;
     z-index: 2;
+    top: 3%
 }
 
+
 /* Hiding Scrollbar*/
+
 .main-content::-webkit-scrollbar {
     display: none;
-} 
+}
 
 h1 {
-    color:white;
+    color: white;
     font-size: 2.5rem;
 }
 
@@ -48,6 +58,23 @@ h3 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
 }
+
+h2 {
+    font-size: 2.8rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+    display: inline;
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem;
+}
+
+.user-box,
+.computer-box {
+    margin-bottom: 2rem;
+    display: block
+}
+
 .list-of-leads {
     margin: 2rem;
 }
@@ -56,10 +83,11 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .leads div {
-    margin: 0 6% 2% 6%;
+    margin: 0 3% 2%;
 }
 
 .leads h4 {
@@ -78,6 +106,7 @@ h3 {
 
 .leads ul {
     list-style-type: none;
+    font-size: 10px;
 }
 
 li {
@@ -90,6 +119,7 @@ li {
     -o-border-radius: 3rem;
 }
 
+
 /*
 comented out to work on getting hover right
 li:hover {
@@ -97,7 +127,6 @@ li:hover {
     color: white;
 }
 */
-
 
 li button {
     color: white;
@@ -119,6 +148,8 @@ button {
     border: none;
     cursor: pointer;
 }
+
+
 /*
 button:hover {
     background-color: white;
@@ -135,3 +166,70 @@ button:hover {
     box-shadow: inset 0 0 8rem 2rem rgb(85, 85, 85);
 }
 
+
+/* Results Screen */
+
+.results-page {
+    position: absolute;
+    /*border: solid .5rem red;*/
+    text-align: center;
+    color: white;
+    overflow: scroll;
+    width: 60%;
+    height: 45%;
+    margin-left: 11.5%;
+    z-index: 2;
+    top: 30%;
+    visibility: hidden;
+}
+
+.results-page h1 {
+    margin-bottom: 1rem;
+}
+
+
+/* Responsive Setup */
+
+@media only screen and (max-width: 1366px) {
+    .main-content {
+        height: 50%;
+        margin-top: 7%;
+        font-size: 14px;
+    }
+    .results-page {
+        top: 15%;
+    }
+}
+
+@media only screen and (min-width: 1366px) and (max-width: 1600px) {
+    .main-content {
+        height: 60%;
+        font-size: 12px;
+    }
+    .results-page {
+        top: 20%;
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main-content,
+    .results-page {
+        height: 100%;
+        width: 80%;
+        left: -1rem;
+    }
+    .bg-img img {
+        display: none;
+    }
+    .leads {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    .vignette {
+        display: none;
+    }
+    ul {
+        margin-bottom: 4rem;
+    }
+}

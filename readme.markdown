@@ -33,8 +33,14 @@
         }<br>
    <h2> /mainGameLogic.js </h2> <br>
      This section will have all the game playing logic and will return whether the user wins or loses
-     we will set up an object that is the users play of the game. For example
-     userPlay{
+     we will set up an object that is the users play of the game. For example <br>
+    
+     userPlay { <br>
+       userWeapon: "knife" <br>
+       userName: "Tim" <br>
+       userLocation: "Detroit" <br>
+       } <br>
+     
         
    <h2> /gameWinDom.js </h2> <br>
      this module will contain the DOM manipulation for onscreen modification based on the outcome of the game

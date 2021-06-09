@@ -16,7 +16,7 @@
   
 <h1>./modules </h1><br>
     <h2> /storyLines.js </h2> <br>
-     <p> This module contains an object that containes multiple objects. Each object is a storyline. This section would also 
+     <p> This module contains an array that containes multiple objects. Each object is a storyline. This section would also 
       conatin the logic to choose a story for the game instance </p>
         exampleStory{ <br>
             title: "the dark night" <br>

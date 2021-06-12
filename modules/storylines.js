@@ -5,6 +5,9 @@ const gameSetUp = {
     {
         id:"1",
         title: "The dark night",
+        background1: "The town needs your help tracking down the masked man who is terrorizing town",
+        introImage: "../example.png",
+        background2: "With this man keeping a watch, there is no future for the  honest hardworking criminal",
         weapon: "fists",
         location: "gotham",
         name: "bruce" ,

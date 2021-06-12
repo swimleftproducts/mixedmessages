@@ -1,4 +1,7 @@
-    export const renderUserSelection = (obj,forwhat)=>{
+    import {assignEvents} from './assignevents.js'
+    
+    export const renderUserSelection = (obj,forWhat)=>{
+        console.log(forWhat)
         const root = document.getElementById("root");
         // remove all html 
         while (root.firstChild) {
@@ -14,10 +17,16 @@
         hint.className = "hint"
 
         // this switch statement helps us know what hint to pull from game object
-        switch (forwhat) {
+        switch (forWhat) {
             case "weapon":
                 hint.innerHTML= obj.weaponHint
                 break;
+            case "name":
+                hint.innerHTML= obj.nameHint
+                break;   
+            case "location":
+                hint.innerHTML= obj.locationHint
+                break;  
         
             default:
                 hint.innerHTML= "in default in switch"
@@ -29,7 +38,7 @@
 
     //creating icons inside of conatiner for showing 
     //selection options
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 6; i++) {
            
             const icon= document.createElement('div');
             icon.className ='icon';
@@ -37,4 +46,34 @@
             icon.id=`icon${i}`
             container.appendChild(icon)
         }
+        
+        //logic to decide what to call button
+        let currentButton =''
+        const button= document.createElement('button');
+        switch (forWhat) {
+            case "weapon":
+                button.id="onToLocationSelectionButton"
+                currentButton="onToLocationSelectionButton"
+                break;
+            case "location":
+                button.id="onToMiniGameButton"  
+                currentButton="onToMiniGameButton"
+                break;
+            case "name":
+                button.id="onToWeaponSelectionButton"  
+                currentButton ="onToWeaponSelectionButton"   
+                break;    
+            default:
+                button.innerHTML= "in default in switch"
+                break;
+        }
+              
+        button.innerHTML= "next"
+        root.appendChild(button)
+        // logic for setting button event listener
+        
+        assignEvents(currentButton,obj)
+        
+        
+    
     }

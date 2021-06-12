@@ -8,17 +8,40 @@ import {renderUserSelection} from './renderuserselection.js';
 
 export function assignEvents(name,obj) {
 
+//this if statement sets listeners for the start button on first page
+// also, this fuction reates the story object for the game
 if(name==="startButton"){    
 const button = document.getElementById("startButton");
 button.addEventListener("click",function(){ 
     const thisStory=gameSetUp.choose();
     renderIntro(thisStory);  
 })};
+
+// this if statement sets listeners for the button to move into user selection
 if(name==="onToSelectionButton"){    
     
     const button = document.getElementById("onToSelectionButton");
     button.addEventListener("click",function(){ 
+        renderUserSelection(obj,"name");
+})};
+
+
+// this if statement sets listeners for the button to move into user selection
+if(name==="onToWeaponSelectionButton"){    
+    
+    const button = document.getElementById("onToWeaponSelectionButton");
+    button.addEventListener("click",function(){ 
         renderUserSelection(obj,"weapon");
-    })};
+})};
+if(name==="onToLocationSelectionButton"){    
+    
+    const button = document.getElementById("onToLocationSelectionButton");
+    button.addEventListener("click",function(){ 
+        renderUserSelection(obj,"location");
+})};
+
+
+
 }
+
   

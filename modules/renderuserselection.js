@@ -46,6 +46,7 @@
             icon.id = `icon${i}`
             container.appendChild(icon)
         }
+        assignEvents("icon")
 
         //logic to decide what to call button
         let currentButton = ''

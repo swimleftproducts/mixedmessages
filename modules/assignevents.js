@@ -64,9 +64,17 @@ if(name==="onToResultsButton"){
         renderResults(obj);
 })};
 
+//set listener on the icons for setting user values
+if(name==="icon"){    
+    const icon = document.getElementsByClassName("icon");
+    console.log(icon)
+    for (let i = 0; i < icon.length; i++) {
+    icon[i].addEventListener("click",function(event){ 
+    console.log('selected input'+event.target.id)
+    })
+    }; 
 
-
-
+};
 
 }
 

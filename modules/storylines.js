@@ -8,6 +8,21 @@ const gameSetUp = {
         background1: "The town needs your help tracking down the masked man who is terrorizing town",
         introImage: "./example.png",
         hintImage: "./example.png",
+        images : {
+            weapon: {
+                image: ['./image 1','./image 2'],
+                id: ['gun', 'claws', 'hammer', 'fist','car','axe']
+            },
+            name: {
+                image: ['./image 1','./image 2'],
+                id: ['adam', 'mike', 'lucy', 'tim','bruce', 'tony']
+            },
+            location: {
+                image: ['./image 1','./image 2'],
+                id: ['mountain', 'car', 'gotham', 'bridge', 'resturaunt', 'station']
+            }
+
+        },
        
         background2: "With this man keeping a watch, there is no future for the  honest hardworking criminal",
         weapon: "fists",

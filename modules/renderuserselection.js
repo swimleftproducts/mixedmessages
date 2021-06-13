@@ -43,7 +43,10 @@
 
             icon.className = 'icon';
             icon.innerHTML = `<br>image ${i+1}`
-            icon.id = `icon${i}`
+            //icon.id = `icon${i}`
+
+            icon.id = obj.images[forWhat].id[i]
+            console.log(icon.id)
             container.appendChild(icon)
         }
         assignEvents("icon")

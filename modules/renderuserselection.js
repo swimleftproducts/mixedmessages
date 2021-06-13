@@ -42,15 +42,15 @@
             const icon = document.createElement('div');
 
             icon.className = 'icon';
-            icon.innerHTML = `<br>image ${i+1}`
-            //icon.id = `icon${i}`
+            icon.innerHTML = `<img src="./example.png" width: 50px; height: auto>`
+                //icon.id = `icon${i}`
 
             icon.id = obj.images[forWhat].id[i]
             console.log(icon.id)
             container.appendChild(icon)
         }
         assignEvents("icon")
-        //logic to decide what to call button
+            //logic to decide what to call button
         let currentButton = ''
         const button = document.createElement('button');
         switch (forWhat) {
@@ -62,7 +62,7 @@
 
                 button.id = "onToResultsButton"
                 currentButton = "onToResultsButton"
-            break;
+                break;
             case "name":
                 button.id = "onToWeaponSelectionButton"
                 currentButton = "onToWeaponSelectionButton"

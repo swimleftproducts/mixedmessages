@@ -10,11 +10,15 @@ export const renderIntro =(obj) =>{
     // remove all html 
     while (root.firstChild) {
         root.removeChild(root.lastChild); 
+        
     }
+    
+   
     const container= document.createElement('div');
     container.className = "container"
     // insert container in 'root' div
     root.appendChild(container)
+    
 
     //This for loop adds in 'div' elements into the intro page these are filled in with text pulled from the story line object. also an image is inserted here
     for (let i = 0; i < 3; i++) {
@@ -23,6 +27,7 @@ export const renderIntro =(obj) =>{
         if(i===0){
             element.innerHTML=obj.background1
         }else if(i===1){
+            console.log(obj.introImage)
             element.innerHTML=`<img src="${obj.introImage}" ></img>`;
         }else{
 
@@ -34,10 +39,11 @@ export const renderIntro =(obj) =>{
     }
     //build button for selecting next set of options
     const button= document.createElement('button');
-    button.id="onToSelectionButton"        
+    
+    button.id="onToHintsButton"        
     button.innerHTML= "On to selection"
       
     root.appendChild(button)
-    assignEvents('onToSelectionButton',obj)
+    assignEvents('onToHintsButton',obj)
     
 }

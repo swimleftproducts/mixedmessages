@@ -7,16 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="./app.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
 </head>
 
 <body>
-
-
-    <main id="root">
-        <h1>Sample first page</h1>
-        <p> this static page will pop up first<br> then the user enters the game from a button and<br> javascript is used to modify the UI from here
-        </p>
-        <button id="startButton"> Start Game </button>
+    <header>
+        <nav>
+            <img src="assets/mixedMessagesLogo.svg" alt="Game Logo" class="logo">
+            <h1 class="title">The Star Killer</h1>
+            <ul>
+                <li>
+                    <a href="">Main</a>
+                </li>
+                <li>
+                    <a href="">Hints</a>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="root" class="box">
+            <h1>Sample first page</h1>
+            <p> this static page will pop up first<br> then the user enters the game from a button and<br> javascript is used to modify the UI from here
+            </p>
+            <button id="startButton"> Start Game </button>
+        </div>
     </main>
 </body>
 

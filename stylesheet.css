@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    background-image: url("assets/wooden-texture.jpg");
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    font-size: 1.5em;
+    background-color: rgba(214, 214, 214, 0.8);
+    border-bottom: 1px solid rgb(128, 128, 128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    font-size: 1rem;
+    margin-right: 2rem;
+}
+
+nav li a,
+nav a:hover,
+nav a:active,
+nav a:visited,
+nav a:focus {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    width: 70px;
+}
+
+.title {
+    font-size: 1.3rem;
+}
+
+main {
+    position: relative;
+    height: 90vh;
+    border: 1px red solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 3px lightgreen dotted;
+    height: 90%;
+    width: 85%;
+    background-color: white;
+    filter: drop-shadow(1rem 1rem 1rem rgb(41, 41, 41));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+}
+
+.box p {
+    line-height: 4rem;
+    text-align: left;
+}
+
+.container {
+    border: 2px aqua dotted;
+    width: 100%;
+    height: 80%;
+    color: black;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.container img {
+    width: 100%;
+}
+
+.icon {
+    height: 7rem;
+    width: 7rem;
+    background-color: white;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(102, 102, 102));
+    border-radius: 1rem;
+    ;
+}
+
+.hint {
+    border: 2px violet solid;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

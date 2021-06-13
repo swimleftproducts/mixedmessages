@@ -1,7 +1,6 @@
     import { assignEvents } from './assignevents.js'
 
     export const renderUserSelection = (obj, forWhat) => {
-
         const root = document.getElementById("root");
         // remove all html 
         while (root.firstChild) {
@@ -41,13 +40,13 @@
         for (let i = 0; i < 6; i++) {
 
             const icon = document.createElement('div');
-            icon.className = 'icon otherclass';
-            icon.innerHTML = `<br>will be icon image ${i+1}`
+
+            icon.className = 'icon';
+            icon.innerHTML = `<br>image ${i+1}`
             icon.id = `icon${i}`
             container.appendChild(icon)
         }
         assignEvents("icon")
-
         //logic to decide what to call button
         let currentButton = ''
         const button = document.createElement('button');
@@ -57,9 +56,10 @@
                 currentButton = "onToLocationSelectionButton"
                 break;
             case "location":
+
                 button.id = "onToResultsButton"
                 currentButton = "onToResultsButton"
-                break;
+            break;
             case "name":
                 button.id = "onToWeaponSelectionButton"
                 currentButton = "onToWeaponSelectionButton"

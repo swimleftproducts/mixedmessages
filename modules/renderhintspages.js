@@ -28,7 +28,8 @@ export const renderHints =(obj,forWhat,timeThrough) =>{
 
     // create container
     const container= document.createElement('div');
-    container.className = "container"
+    container.classList.add("container")
+    container.classList.add("hints")
     // insert container in 'root' div
     root.appendChild(container)
 
@@ -42,6 +43,7 @@ export const renderHints =(obj,forWhat,timeThrough) =>{
             element.innerHTML=`<img src="${obj.hintImage}" ></img>`;
         } else{
            element.innerHTML= obj.locationHintLong
+           element.classList.add("hintdiv")
         }
         
         // each new elmenet is appeneded onto the container as a child.

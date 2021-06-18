@@ -136,26 +136,33 @@ main {
         justify-content: space-evenly;
         text-align: center;
         overflow: scroll;
+        display: grid;
+        grid-template-rows: 150px, 150px;
+        grid-template-columns: 400px;
+        justify-content: right;
+        align-content: flex-end;
     }
     .container.hints img{
-        position: relative;
+        position: absolute;
         left: 0px;
-        top: 50px;
+        top: 0px;
         width: 90%;
         height: auto;
         float: left;
+        z-index: 0;
        
     }
 
     .container div.hintdiv{
-       
-        position: absolute;
+        z-index: 1;
+        
+        /* position: absolute;
         right:40px;
        bottom:50px;
         width:400px;
-        height: 300px;
+        height: 300px; */
         border: 2px black solid;
-        background-color: rgb(41, 29, 92);
+        background-color: rgb(127, 109, 207);
          
         
     }

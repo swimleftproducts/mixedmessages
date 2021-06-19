@@ -145,8 +145,8 @@ main {
     .container.hints img{
         position: absolute;
         left: 0px;
-        top: 0px;
-        width: 90%;
+        top: 50px;
+        width: 100%;
         height: auto;
         float: left;
         z-index: 0;

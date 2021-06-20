@@ -120,3 +120,43 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.icon img {}
+
+@media only screen and (min-width: 800px) {
+    .container.hints {
+        border: 2px rgb(190, 44, 159) solid;
+        width: 100%;
+        height: 90%;
+        color: black;
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        text-align: center;
+        overflow: scroll;
+        display: grid;
+        grid-template-rows: 150px, 150px;
+        grid-template-columns: 400px;
+        justify-content: right;
+        align-content: flex-end;
+    }
+    .container.hints img {
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        width: 100%;
+        height: auto;
+        float: left;
+        z-index: 0;
+    }
+    .container div.hintdiv {
+        z-index: 1;
+        /* position: absolute;
+        right:40px;
+       bottom:50px;
+        width:400px;
+        height: 300px; */
+        border: 2px black solid;
+        background-color: rgb(127, 109, 207);
+    }
+}

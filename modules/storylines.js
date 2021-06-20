@@ -1,5 +1,5 @@
 const gameSetUp = {
-    //this array constains all possible stories and associated info
+    //this array contains all possible stories and associated info
     stories: [{
             id: "1",
             title: "The dark night",
@@ -18,7 +18,7 @@ const gameSetUp = {
                 location: {
                     image: ['./image 1', './image 2'],
                     id: ['mountain', 'car', 'gotham', 'bridge', 'resturaunt', 'station']
-                }
+                },
 
             },
 
@@ -39,7 +39,21 @@ const gameSetUp = {
             userSelection: []
         },
         {
-            id: "2"
+            id: "2",
+            background2: "With this man keeping a watch, there is no future for the  honest hardworking criminal",
+            weapon: "fists",
+            location: "gotham",
+            name: "bruce",
+            weaponHint: "capow, not bang",
+            weaponHintLong: "weapon Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            locationHint: "worse than new york",
+            locationHintLong: "location Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, .",
+            nameHint: "wayne enterprises CEO",
+            nameHintLong: "name Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
+            game: 0,
+            cheat: () => {
+
+            },
         },
     ],
 

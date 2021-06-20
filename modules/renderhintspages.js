@@ -12,6 +12,7 @@ export const renderHints =(obj,forWhat,timeThrough) =>{
         timeThrough++
    }else if(timeThrough==2){
     forWhat="name"
+    timeThrough++
 }
 
     const layouts = {
@@ -28,29 +29,34 @@ export const renderHints =(obj,forWhat,timeThrough) =>{
 
     // create container
     const container= document.createElement('div');
-    container.className = "container"
+    container.classList.add("container")
+    container.classList.add("hints")
     // insert container in 'root' div
     root.appendChild(container)
 
-    console.log(forWhat)
+    
+//the seciton below creates the text and immage on page
+
     for (let i = 0; i < 3; i++) {
-        
+        // creat key for pulling hints from object
+        let hintKey= forWhat+'HintLong'
         const element= document.createElement('div');
-      
         if (layouts[forWhat][i]==="img") {
-            console.log(`<img src="${obj.hintImage}" ></img>`)
+            
             element.innerHTML=`<img src="${obj.hintImage}" ></img>`;
         } else{
-           element.innerHTML= obj.locationHintLong
+           element.innerHTML= obj[hintKey]
+           element.classList.add("hintdiv")
         }
-        
-        // each new elmenet is appeneded onto the container as a child.
+       // each new elmenet is appeneded onto the container as a child.
         container.appendChild(element)
     }
-    //build button for selecting next set of options
-    const button= document.createElement('button');
     
-    if(timeThrough<2){
+//build button for selecting next set of options and render next page
+    const button= document.createElement('button');
+    console.log(timeThrough)
+    
+    if(timeThrough<3){
         button.id="onToHintsButton"        
         button.innerHTML= "There is more..."
         

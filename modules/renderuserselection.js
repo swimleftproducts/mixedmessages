@@ -49,7 +49,7 @@
             console.log(icon.id)
             container.appendChild(icon)
         }
-        assignEvents("icon")
+        assignEvents("icon", undefined, undefined, forWhat)
             //logic to decide what to call button
         let currentButton = ''
         const button = document.createElement('button');

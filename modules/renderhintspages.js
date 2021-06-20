@@ -38,7 +38,7 @@ export const renderHints = (obj, forWhat, timeThrough) => {
     root.appendChild(container)
 
 
-    //the seciton below creates the text and immage on page
+    //the seciton below creates the text and image on page
 
     for (let i = 0; i < 3; i++) {
         // creat key for pulling hints from object
@@ -72,6 +72,6 @@ export const renderHints = (obj, forWhat, timeThrough) => {
 
         root.appendChild(button)
 
-        assignEvents('onToHintsButton', obj, timeThrough)
+        assignEvents('onToSelectionButton', obj, timeThrough)
     }
 }

@@ -7,7 +7,7 @@ import { renderResults } from './renderresults.js'
 // this function assigns the event listeners and defines what functions they call. It takes is a name and then assigns functions according to that name this is done so that we can assign events for elements that do not get created untill later in the game. This approach is nice because we can keep ALL event assignment functionality in here.
 
 
-export function assignEvents(name, obj, timeThrough) {
+export function assignEvents(name, obj, timeThrough, forWhat) {
 
     //this if statement sets listeners for the start button on first page
     // also, this fuction reates the story object for the game
@@ -76,10 +76,16 @@ export function assignEvents(name, obj, timeThrough) {
         console.log(icon)
         for (let i = 0; i < icon.length; i++) {
             icon[i].addEventListener("click", function(event) {
-                console.log('selected input ' + event.target.id);
+                //console.log('selected input ' + event.target.id);
                 //adding the selected inputs to the userSelection list from storylines.js
-                gameSetUp.stories[0].userSelection.push(event.target.id)
-                console.log(gameSetUp.stories[0].userSelection)
+                // gameSetUp.stories[0].userSelection.push(event.target.id)
+                // console.log(gameSetUp.stories[0].userSelection)
+
+                // call method inside of story object to take in user input
+                gameSetUp.userSelection(event, forWhat);
+                // make sure user input only gets entered once into array
+                gameSetUp.checkUserInput();
+
             })
         };
 

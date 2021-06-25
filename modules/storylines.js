@@ -9,7 +9,7 @@ const gameSetUp = {
             images: {
                 weapon: {
                     image: ['./image 1', './image 2'],
-                    id: ['gun', 'claws', 'hammer', 'fist', 'car', 'axe']
+                    id: ['gun', 'claws', 'hammer', 'fists', 'car', 'axe']
                 },
                 name: {
                     image: ['./image 1', './image 2'],
@@ -38,7 +38,7 @@ const gameSetUp = {
             },
             // location, weapon then name
 
-            userSelection: []
+            userSelection: [],
         },
         {
             id: "2",
@@ -106,5 +106,5 @@ const gameSetUp = {
 
 
 }
-
+console.log(gameSetUp.stories[0].weapon + ' ' + gameSetUp.stories[0].location + ' ' + gameSetUp.stories[0].name)
 export { gameSetUp };

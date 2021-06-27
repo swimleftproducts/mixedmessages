@@ -17,21 +17,24 @@ const gameSetUp = {
                 },
                 location: {
                     image: ['./image 1', './image 2'],
-                    id: ['mountain', 'car', 'gotham', 'bridge', 'resturaunt', 'station']
+                    id: ['mountain', 'car', 'gotham alley', 'bridge', 'resturaunt', 'station']
                 },
 
             },
 
-            background2: "With this man keeping a watch, there is no future for the  honest hardworking criminal",
+            background2: `"With this man keeping a watch, there is no future for the honest hardworking criminal. The killer seems to be very well funded and knowledgeable. When the killer strikes, his method seems to be very well planned. The city Police department needs your help with the investigation. the GPD have some leads that can help you figuring out "WHO", "WHERE", and "WHAT WEAPON" the killer used in his recent attack.`,
             weapon: "fists",
-            location: "gotham",
+            weaponImage: "./BatmanGloves.jpeg",
+            location: "gotham alley",
+            locationImage: "GothamImage.jpeg",
             name: "bruce",
-            weaponHint: "capow, not bang",
-            weaponHintLong: "WEAPON Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            nameImage: "./BruceWayne.jpg",
+            weaponHint: "Capow, not bang",
+            weaponHintLong: "According to the GPD, they found a mysterious and a piece of dark cloth that along the side of the road. The GPD also said that the cloth was made of a very high quality material.",
             locationHint: "worse than new york",
-            locationHintLong: " LOCATION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            locationHintLong: "There is a rumor that 3 blocks from the crime scene, there is a person who might know the killer. Rumor also said that the person can be found in the 11th floor of the tallest building in the city.",
             nameHint: "wayne enterprises CEO",
-            nameHintLong: " NAME Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            nameHintLong: "There was a fallen card right next to the garbage. It was wet and was not readable but it seems there is a logo on the right top corner of card.",
             game: 0,
             cheat: () => {
 

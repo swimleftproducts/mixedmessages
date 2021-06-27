@@ -121,14 +121,28 @@ main {
     justify-content: center;
 }
 
-.icon img {}
+.introImage {
+    width: 70% !important;
+    height: auto;
+}
 
 .results {
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: auto;
+    display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.results img {
+    width: 50%;
+    height: 100px;
+    ;
+}
+
+.resultContainer {
+    width: 100%;
+    color: black;
 }
 
 @media only screen and (min-width: 800px) {

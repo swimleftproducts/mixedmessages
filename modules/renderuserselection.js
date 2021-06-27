@@ -35,7 +35,7 @@
 
         container.appendChild(hint)
 
-        //creating icons inside of conatiner for showing 
+        //creating icons inside of container for showing 
         //selection options
         for (let i = 0; i < 6; i++) {
 

@@ -5,7 +5,7 @@ const gameSetUp = {
             title: "The dark night",
             background1: "The town needs your help tracking down the masked man who is terrorizing town",
             introImage: "./typewriter.jpg",
-            hintImage: "./example.png",
+            hintImage: "./WayneEnterpriseBuilding.jpg",
             images: {
                 weapon: {
                     image: ['./image 1', './image 2'],
@@ -100,7 +100,7 @@ const gameSetUp = {
 
     },
 
-    //this method is ran every time the user does a new selction. This
+    //this method is ran every time the user does a new selection. This
     // method makes sure only 1 selection string is entered into the
     //user input array 
     checkUserInput() {

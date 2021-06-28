@@ -16,9 +16,9 @@ export const renderResults = (obj) => {
 
     }
 
-    let comp = [gameSetUp.stories[0].name, gameSetUp.stories[0].weapon, gameSetUp.stories[0].location].join(', ');
+    let comp = [obj.name, obj.weapon, obj.location].join(', ');
     //comp.join('')
-    let user = gameSetUp.stories[0].userSelection.join(', ');
+    let user = obj.userSelection.join(', ');
     let result = '';
     if (comp === user) {
         result = `You win! your guess "${user}" was exactly the same with killer's alibi "${comp}"`;

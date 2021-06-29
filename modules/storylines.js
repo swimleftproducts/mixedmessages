@@ -36,6 +36,8 @@ const gameSetUp = {
             cheat: () => {
 
             },
+            // location, weapon then name
+
             userSelection: []
         },
         {
@@ -57,15 +59,52 @@ const gameSetUp = {
         },
     ],
 
+
+    storyInUse: 4,
+
+
+
     // this method chooses what story to use
     choose: function() {
         // pick random story, the random is removed for now
-        const num = Math.floor(Math.random() * this.stories.length)
+        // const num = Math.floor(Math.random() * this.stories.length)
 
-        // this methhod returns a random story the story
+        let num = 0
+            // this methhod returns a random story the story
+        this.storyInUse = num
         return this.stories[0];
 
+    },
+
+    //  method to add user input
+    userSelection(event, forWhat) {
+        let selection = event.target.id;
+
+        // I want a way to know which user seleciton I am setting 
+        // weapon , name or location?
+        //let forWhat = "weapon";
+
+
+        if (forWhat === "name") {
+            this.stories[this.storyInUse].userSelection[0] = selection;
+        } else if (forWhat === "weapon") {
+            this.stories[this.storyInUse].userSelection[1] = selection;
+        } else {
+            this.stories[this.storyInUse].userSelection[2] = selection;
+        }
+
+        console.log(this.stories[this.storyInUse].userSelection)
+
+    },
+
+    //this method is ran every time the user does a new selction. This
+    // method makes sure only 1 selection string is entered into the
+    //user input array 
+    checkUserInput() {
+        console.log("checking input")
     }
+
+
 }
 
 export { gameSetUp };

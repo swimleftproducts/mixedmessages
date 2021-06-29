@@ -132,11 +132,12 @@ main {
     display: inline-flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .results img {
-    width: 50%;
-    height: 100px;
+    width: 80%;
+    height: 8rem;
     ;
 }
 
@@ -180,5 +181,17 @@ main {
         height: 300px; */
         border: 2px black solid;
         background-color: rgb(127, 109, 207);
+    }
+    .results {
+        width: 100%;
+        height: auto;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .results img {
+        width: 40%;
+        height: 15rem;
     }
 }

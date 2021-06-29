@@ -31,24 +31,23 @@ export const renderResults = (obj) => {
     const container = document.createElement('div');
     container.className = "container";
     container.innerHTML = "<h1> THE RESULTS ARE IN</h1>"
-        //creating a div within the div for the User Selection and Computer generated selection
-        // This is for Computer generated selection
-    const computerContainer = document.createElement('div');
-    computerContainer.className = "results";
-    computerContainer.innerHTML = `<img src="${gameSetUp.stories[0].nameImage}"><img src="${gameSetUp.stories[0].weaponImage}"><img src="${gameSetUp.stories[0].locationImage}">`
-        // This is for User Selected choices (It's hard coded at the moment for testing...)
-    const userContainer = document.createElement('div');
-    userContainer.className = "results";
-    userContainer.innerHTML = `<img src="${gameSetUp.stories[0].nameImage}"><img src="${gameSetUp.stories[0].weaponImage}"><img src="${gameSetUp.stories[0].locationImage}">`
-        //container.id = 
-        //This is for Result Container that
-    const resultContainer = document.createElement('div');
-    resultContainer.className = "resultContainer";
-    resultContainer.innerHTML = `<h4>${result}</h4>`; //JSON.stringify(obj);
-    // insert containers in 'root' div
-    container.appendChild(computerContainer);
-    container.appendChild(userContainer);
-    container.appendChild(resultContainer);
+
+    // this loop will add necessary container divs for each computer generated choices and user generated choices
+    for (let i = 0; i < 3; i++) {
+        const element = document.createElement('div');
+        if (i === 0) {
+            element.className = "results";
+            element.innerHTML = `<img src="${obj.nameImage}"/><img src="${obj.weaponImage}"/><img src="${obj.locationImage}"/>`
+        } else if (i === 1) {
+            element.className = "results";
+            element.innerHTML = `${obj.userSelection}`
+        } else {
+            element.className = "resultContainer"
+            element.innerHTML = `${result}`;
+        }
+        container.appendChild(element)
+    }
+
     root.appendChild(container);
 
 

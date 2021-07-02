@@ -38,12 +38,23 @@
         //creating icons inside of container for showing 
         //selection options
         for (let i = 0; i < 6; i++) {
-
             const icon = document.createElement('div');
-
             icon.className = 'icon';
-            icon.innerHTML = `<img src="./example.png" width: 50px; height: auto>`
-                //icon.id = `icon${i}`
+            //creating 2 containers within icon. one for images and one for description
+            for (let j = 0; j < 1; j++) {
+                //this is for the image
+                const iconImage = document.createElement('div')
+                iconImage.className = 'icon-image'
+                iconImage.innerHTML = `<img src="${obj.images[forWhat].image[i]}"/>`;
+                icon.appendChild(iconImage);
+                //this is for the description
+                const iconDescription = document.createElement('div');
+                iconDescription.className = 'icon-description';
+                iconDescription.innerHTML = `${obj.images[forWhat].id[i]}`
+                icon.appendChild(iconDescription);
+            }
+            // icon.innerHTML = `<img src="${obj.images[forWhat].image[i]}" width: auto; height: 80%>${obj.images[forWhat].id[i]}`
+            //icon.id = `icon${i}`
 
             icon.id = obj.images[forWhat].id[i]
             console.log(icon.id)

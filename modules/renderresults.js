@@ -15,9 +15,8 @@ export const renderResults = (obj) => {
         root.removeChild(root.lastChild);
 
     }
-
+    // This compares if the selected story and selection matches userSelection
     let comp = [obj.name, obj.weapon, obj.location].join(', ');
-    //comp.join('')
     let user = obj.userSelection.join(', ');
     let result = '';
     if (comp === user) {
@@ -54,5 +53,3 @@ export const renderResults = (obj) => {
 
 
 }
-
-// This function compares if the selected story and selection matches userSelection

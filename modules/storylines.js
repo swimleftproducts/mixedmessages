@@ -8,16 +8,16 @@ const gameSetUp = {
             hintImage: "./WayneEnterpriseBuilding.jpg",
             images: {
                 weapon: {
-                    image: ['./image 1', './image 2'],
+                    image: ['./example.png', './example.png', './example.png', './BatmanGloves.jpeg', './example.png', './example.png'],
                     id: ['gun', 'claws', 'hammer', 'fists', 'car', 'axe']
                 },
                 name: {
-                    image: ['./image 1', './image 2'],
+                    image: ['./example.png', './example.png', './example.png', './example.png', './BruceWayne.jpg', './example.png', ],
                     id: ['adam', 'mike', 'lucy', 'tim', 'bruce', 'tony']
                 },
                 location: {
-                    image: ['./image 1', './image 2'],
-                    id: ['mountain', 'car', 'gotham alley', 'bridge', 'resturaunt', 'station']
+                    image: ['./example.png', './example.png', './GothamImage.jpeg', './example.png', './example.png', './example.png', ],
+                    id: ['mountain', 'car', 'gotham alley', 'bridge', 'restaurant', 'station']
                 },
 
             },

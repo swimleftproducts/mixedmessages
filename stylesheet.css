@@ -89,6 +89,7 @@ main {
 
 .container {
     /* border: 2px aqua dotted;*/
+    outline: 1px red solid;
     width: 100%;
     height: 95%;
     color: black;
@@ -107,9 +108,38 @@ main {
     height: 7rem;
     width: 7rem;
     background-color: white;
+    /* overflow: hidden; */
+    /* outline: 1px aqua solid; */
+}
+
+.icon-image {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(102, 102, 102));
+    /* outline: 1px solid green; */
+}
+
+.icon-image img {
+    width: 100%;
+    height: 100%;
     border-radius: 1rem;
-    overflow: scroll;
+}
+
+.icon-description {
+    position: relative;
+    display: inline;
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+    top: -0.5rem;
+    left: 1.8rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.3rem;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(102, 102, 102));
+    /* outline: 1px solid purple; */
 }
 
 .hint {
@@ -193,5 +223,9 @@ main {
     .results img {
         width: 40%;
         height: 15rem;
+    }
+    .icon-box {
+        height: 10rem;
+        width: 10rem;
     }
 }

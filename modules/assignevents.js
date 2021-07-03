@@ -36,6 +36,10 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         const button = document.getElementById("onToSelectionButton");
         button.addEventListener("click", function() {
             renderUserSelection(obj, "name");
+        }) 
+        const backButton = document.getElementById("backButton"); 
+        backButton.addEventListener("click", function() {
+            console.log("testing")
         })
     };
 

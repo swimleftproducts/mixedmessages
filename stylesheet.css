@@ -115,7 +115,7 @@ main {
 .icon-image {
     width: 80%;
     height: 80%;
-    overflow: scroll;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(102, 102, 102));

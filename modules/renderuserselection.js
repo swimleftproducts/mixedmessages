@@ -45,7 +45,7 @@
                 //this is for the image
                 const iconImage = document.createElement('div')
                 iconImage.className = 'icon-image'
-                iconImage.innerHTML = `<img src="${obj.images[forWhat].image[i]}" id="testingImage" /> This is a text`;
+                iconImage.innerHTML = `<img src="${obj.images[forWhat].image[i]}" id="testingImage" />`;
                 icon.appendChild(iconImage);
                 //this is for the description
                 const iconDescription = document.createElement('div');
@@ -82,13 +82,40 @@
                 button.innerHTML = "in default in switch"
                 break;
         }
-
+        
         button.innerHTML = "next"
         root.appendChild(button)
             // logic for setting button event listener
 
-        assignEvents(currentButton, obj)
+        // assignEvents(currentButton, obj);
 
+        const backButton = document.createElement('button');
+        backButton.id = "backButton"
+        
+        // switch (forWhat) {
+        //     case "weapon":
+        //         backButton.id = "onToLocationSelectionButton"
+        //         currentButton = "onToLocationSelectionButton"
+        //         break;
+        //     case "location":
+
+        //         backButton.id = "onToResultsButton"
+        //         currentButton = "onToResultsButton"
+        //         break;
+        //     case "name":
+        //         backButton.id = "onToWeaponSelectionButton"
+        //         currentButton = "onToWeaponSelectionButton"
+        //         break;
+        //     default:
+        //         backButton.innerHTML = "in default in switch"
+        //         break;
+        // }
+        
+        backButton.innerHTML = "back button"
+        root.appendChild(backButton)
+            // logic for setting button event listener
+
+        assignEvents(currentButton, obj)
 
 
     }

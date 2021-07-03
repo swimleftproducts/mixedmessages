@@ -81,7 +81,7 @@ const gameSetUp = {
 
     //  method to add user input
     userSelection(event, forWhat) {
-        let selection = event.target.id;
+        let selection = event.currentTarget.id;
 
         // I want a way to know which user seleciton I am setting 
         // weapon , name or location?

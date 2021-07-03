@@ -52,6 +52,10 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderUserSelection(obj, "weapon");
         })
+        const backButton = document.getElementById("backButton"); 
+        backButton.addEventListener("click", function() {
+            console.log("testing")
+        })
     };
 
     // this if statement sets listeners for the button to move into user selection for Weapons
@@ -62,6 +66,10 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderUserSelection(obj, "location");
         })
+        const backButton = document.getElementById("backButton"); 
+        backButton.addEventListener("click", function() {
+            console.log("testing")
+        })
     };
 
     // this if statement sets listeners for the button to move into user selection for Weapons
@@ -71,6 +79,10 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         button.addEventListener("click", function() {
 
             renderResults(obj);
+        })
+        const backButton = document.getElementById("backButton"); 
+        backButton.addEventListener("click", function() {
+            console.log("testing")
         })
     };
 

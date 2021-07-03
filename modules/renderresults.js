@@ -25,8 +25,6 @@ export const renderResults = (obj) => {
         result = `You lose! the killer's alibi was "${comp}" your leads were "${user}"`;
     }
 
-    console.log(`${comp}\n${user}`)
-
     const container = document.createElement('div');
     container.className = "container";
     container.innerHTML = "<h1> THE RESULTS ARE IN</h1>"

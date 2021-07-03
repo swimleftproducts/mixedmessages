@@ -7,15 +7,12 @@ export const renderHints = (obj, forWhat, timeThrough) => {
     //lets define an object that defines the page layout for each forWhat 
     if (!timeThrough) {
         timeThrough = 1
-        console.log('timeThrough 1')
     } else if (timeThrough == 1) {
         forWhat = "weapon"
         timeThrough = 2
-        console.log("timeThrough 2")
     } else {
         forWhat = "name"
         timeThrough = 3
-        console.log("timeThrough 3")
     }
 
     const layouts = {
@@ -57,7 +54,6 @@ export const renderHints = (obj, forWhat, timeThrough) => {
 
     //build button for selecting next set of options and render next page
     const button = document.createElement('button');
-    console.log(timeThrough)
 
     if (timeThrough < 3) {
         button.id = "onToHintsButton"

@@ -27,7 +27,6 @@ export const renderIntro = (obj) => {
         if (i === 0) {
             element.innerHTML = obj.background1
         } else if (i === 1) {
-            console.log(obj.introImage + " from rendergameinto.js")
             element.innerHTML = `<img src="${obj.introImage}" class="introImage" ></img>`;
         } else {
             element.innerHTML = obj.background2

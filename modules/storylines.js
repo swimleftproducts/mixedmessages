@@ -96,18 +96,10 @@ const gameSetUp = {
             this.stories[this.storyInUse].userSelection[2] = selection;
         }
 
-        console.log(this.stories[this.storyInUse].userSelection)
-
     },
 
     //this method is ran every time the user does a new selection. This
-    // method makes sure only 1 selection string is entered into the
-    //user input array 
-    checkUserInput() {
-        console.log("checking input")
-    }
 
 
 }
-console.log(gameSetUp.stories[0].weapon + ' ' + gameSetUp.stories[0].location + ' ' + gameSetUp.stories[0].name)
 export { gameSetUp };

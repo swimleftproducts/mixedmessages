@@ -73,13 +73,9 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
     //set listener on the icons for setting user values
     if (name === "icon") {
         const icon = document.getElementsByClassName("icon");
-        console.log(icon)
+
         for (let i = 0; i < icon.length; i++) {
             icon[i].addEventListener("click", function(event) {
-                //console.log('selected input ' + event.target.id);
-                //adding the selected inputs to the userSelection list from storylines.js
-                // gameSetUp.stories[0].userSelection.push(event.target.id)
-                // console.log(gameSetUp.stories[0].userSelection)
 
                 // call method inside of story object to take in user input
                 gameSetUp.userSelection(event, forWhat);

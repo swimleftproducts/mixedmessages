@@ -45,19 +45,19 @@
                 //this is for the image
                 const iconImage = document.createElement('div')
                 iconImage.className = 'icon-image'
-                iconImage.innerHTML = `<img src="${obj.images[forWhat].image[i]}"/>`;
+                iconImage.innerHTML = `<img src="${obj.images[forWhat].image[i]}" id="testingImage" /> This is a text`;
                 icon.appendChild(iconImage);
                 //this is for the description
                 const iconDescription = document.createElement('div');
                 iconDescription.className = 'icon-description';
                 iconDescription.innerHTML = `${obj.images[forWhat].id[i]}`
                 icon.appendChild(iconDescription);
+
             }
             // icon.innerHTML = `<img src="${obj.images[forWhat].image[i]}" width: auto; height: 80%>${obj.images[forWhat].id[i]}`
             //icon.id = `icon${i}`
 
             icon.id = obj.images[forWhat].id[i]
-            console.log(icon.id)
             container.appendChild(icon)
         }
         assignEvents("icon", undefined, undefined, forWhat)

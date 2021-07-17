@@ -29,7 +29,17 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         });
         const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
-            renderIntro(obj)
+           console.log(forWhat)
+            
+          //location weapon name
+            if (forWhat === "weapon"){
+                
+                renderHints(obj, "location", !timeThrough);
+            } else {
+                renderIntro(obj)
+            }
+            
+            //renderIntro(obj)
 
         });
 
@@ -45,9 +55,9 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         })
         const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
+            console.log('in last back button')
             if (forWhat === "name") {
-                timeThrough -= 1
-                renderHints(obj, forWhat, timeThrough)
+                renderHints(obj, "weapon", 1);
             }
         });
     };

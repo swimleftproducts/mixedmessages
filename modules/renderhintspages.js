@@ -47,7 +47,7 @@ export const renderHints = (obj, forWhat, timeThrough) => {
         } else {
             element.innerHTML = obj[hintKey]
             element.classList.add("hintdiv")
-        }
+        } 
         // each new elmenet is appeneded onto the container as a child.
         container.appendChild(element)
     }
@@ -63,7 +63,7 @@ export const renderHints = (obj, forWhat, timeThrough) => {
 
         root.appendChild(button)
         root.appendChild(backButton)
-        assignEvents('onToHintsButton', obj, timeThrough)
+        assignEvents('onToHintsButton', obj, timeThrough,forWhat)
     } else {
         button.id = "onToSelectionButton"
         button.innerHTML = "Time to make a choice"
@@ -71,6 +71,6 @@ export const renderHints = (obj, forWhat, timeThrough) => {
         backButton.innerHTML = "back button"
         root.appendChild(button)
         root.appendChild(backButton)
-        assignEvents('onToSelectionButton', obj, timeThrough)
+        assignEvents('onToSelectionButton', obj, timeThrough, forWhat)
     }
 }

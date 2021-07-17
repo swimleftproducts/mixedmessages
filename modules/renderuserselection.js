@@ -70,7 +70,6 @@
                 currentButton = "onToLocationSelectionButton"
                 break;
             case "location":
-
                 button.id = "onToResultsButton"
                 currentButton = "onToResultsButton"
                 break;

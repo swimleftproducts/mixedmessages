@@ -1,5 +1,5 @@
 //import needed modules
-import { assignEvents } from './assignevents.js';
+import { assignEvents } from './assignEvents.js';
 
 
 // this function takes in an object that represents the 
@@ -39,9 +39,9 @@ export const renderIntro = (obj) => {
     const button = document.createElement('button');
 
     button.id = "onToHintsButton"
-    button.innerHTML = "On to selection"
+    button.innerHTML = "Check the leads"
 
     root.appendChild(button)
-    assignEvents('onToHintsButton', obj)
+    assignEvents('onToHintsButton', obj, undefined, undefined)
 
 }

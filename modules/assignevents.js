@@ -4,7 +4,7 @@ import { renderUserSelection } from './renderuserselection.js';
 import { renderHints } from './renderhintspages.js'
 import { renderResults } from './renderresults.js'
 
-// this function assigns the event listeners and defines what functions they call. It takes is a name and then assigns functions according to that name this is done so that we can assign events for elements that do not get created untill later in the game. This approach is nice because we can keep ALL event assignment functionality in here.
+// this functivon assigns the event listeners and defines what functions they call. It takes is a name and then assigns functions according to that name this is done so that we can assign events for elements that do not get created until later in the game. This approach is nice because we can keep ALL event assignment functionality in here.
 
 
 export function assignEvents(name, obj, timeThrough, forWhat) {
@@ -26,7 +26,13 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         const button = document.getElementById("onToHintsButton");
         button.addEventListener("click", function() {
             renderHints(obj, "location", timeThrough);
-        })
+        });
+        const backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function() {
+            renderIntro(obj)
+
+        });
+
     };
 
 
@@ -36,11 +42,14 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         const button = document.getElementById("onToSelectionButton");
         button.addEventListener("click", function() {
             renderUserSelection(obj, "name");
-        }) 
-        const backButton = document.getElementById("backButton"); 
-        backButton.addEventListener("click", function() {
-            console.log("testing")
         })
+        const backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function() {
+            if (forWhat === "name") {
+                timeThrough -= 1
+                renderHints(obj, forWhat, timeThrough)
+            }
+        });
     };
 
 
@@ -52,7 +61,7 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderUserSelection(obj, "weapon");
         })
-        const backButton = document.getElementById("backButton"); 
+        const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
             console.log("testing")
         })
@@ -66,7 +75,8 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderUserSelection(obj, "location");
         })
-        const backButton = document.getElementById("backButton"); 
+
+        const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
             console.log("testing")
         })
@@ -80,7 +90,7 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderResults(obj);
         })
-        const backButton = document.getElementById("backButton"); 
+        const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
             console.log("testing")
         })
@@ -96,7 +106,7 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
                 // call method inside of story object to take in user input
                 gameSetUp.userSelection(event, forWhat);
                 // make sure user input only gets entered once into array
-                gameSetUp.checkUserInput();
+                // gameSetUp.checkUserInput();
 
             })
         };

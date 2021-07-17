@@ -1,4 +1,4 @@
-    import { assignEvents } from './assignevents.js'
+    import { assignEvents } from './assignEvents.js'
 
     export const renderUserSelection = (obj, forWhat) => {
         const root = document.getElementById("root");
@@ -82,7 +82,7 @@
                 button.innerHTML = "in default in switch"
                 break;
         }
-        
+
         button.innerHTML = "next"
         root.appendChild(button)
             // logic for setting button event listener
@@ -91,7 +91,7 @@
 
         const backButton = document.createElement('button');
         backButton.id = "backButton"
-        
+
         // switch (forWhat) {
         //     case "weapon":
         //         backButton.id = "onToLocationSelectionButton"
@@ -110,7 +110,7 @@
         //         backButton.innerHTML = "in default in switch"
         //         break;
         // }
-        
+
         backButton.innerHTML = "back button"
         root.appendChild(backButton)
             // logic for setting button event listener

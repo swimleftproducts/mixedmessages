@@ -1,5 +1,5 @@
 //import needed modules
-import { assignEvents } from './assignevents.js';
+import { assignEvents } from './assignEvents.js';
 import { gameSetUp } from './storylines.js';
 
 // this function takes in an object that represents the 
@@ -21,6 +21,8 @@ export const renderResults = (obj) => {
     let result = '';
     if (comp === user) {
         result = `You win! your guess "${user}" was exactly the same with killer's alibi "${comp}"`;
+    } else if (comp !== user && user === "") {
+        result = `You lose! the killer's alibi was "${comp}" and you didn't have any leads`;
     } else {
         result = `You lose! the killer's alibi was "${comp}" your leads were "${user}"`;
     }

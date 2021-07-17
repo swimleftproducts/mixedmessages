@@ -1,7 +1,7 @@
 //this render js file will be called 3 times, first to render location, then weapon then person, general layout is 3 divs 1 that is an image and 2 with text. The image will rotate downward in each render
 
 //import assignevents to set listener on button
-import { assignEvents } from './assignevents.js';
+import { assignEvents } from './assignEvents.js';
 
 export const renderHints = (obj, forWhat, timeThrough) => {
     //lets define an object that defines the page layout for each forWhat 
@@ -35,7 +35,7 @@ export const renderHints = (obj, forWhat, timeThrough) => {
     root.appendChild(container)
 
 
-    //the seciton below creates the text and image on page
+    //the section below creates the text and image on page
 
     for (let i = 0; i < 3; i++) {
         // creat key for pulling hints from object
@@ -54,20 +54,23 @@ export const renderHints = (obj, forWhat, timeThrough) => {
 
     //build button for selecting next set of options and render next page
     const button = document.createElement('button');
-
+    const backButton = document.createElement('button');
     if (timeThrough < 3) {
         button.id = "onToHintsButton"
         button.innerHTML = "There is more..."
+        backButton.id = "backButton"
+        backButton.innerHTML = "back button"
 
         root.appendChild(button)
-
+        root.appendChild(backButton)
         assignEvents('onToHintsButton', obj, timeThrough)
     } else {
         button.id = "onToSelectionButton"
         button.innerHTML = "Time to make a choice"
-
+        backButton.id = "backButton"
+        backButton.innerHTML = "back button"
         root.appendChild(button)
-
+        root.appendChild(backButton)
         assignEvents('onToSelectionButton', obj, timeThrough)
     }
 }

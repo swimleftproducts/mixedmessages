@@ -28,20 +28,23 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
             renderHints(obj, "location", timeThrough);
         });
         const backButton = document.getElementById("backButton");
-        backButton.addEventListener("click", function() {
-           console.log(forWhat)
-            
-          //location weapon name
-            if (forWhat === "weapon"){
-                
-                renderHints(obj, "location", !timeThrough);
-            } else {
-                renderIntro(obj)
-            }
-            
-            //renderIntro(obj)
+        if (backButton) {
+            backButton.addEventListener("click", function() {
+                console.log(forWhat)
 
-        });
+                //location weapon name
+                if (forWhat === "weapon") {
+
+                    renderHints(obj, "location", !timeThrough);
+                } else {
+                    renderIntro(obj)
+                }
+
+                //renderIntro(obj)
+
+            });
+        }
+
 
     };
 
@@ -73,7 +76,7 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         })
         const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
-            console.log("testing")
+            renderHints(obj, "weapon", 2);
         })
     };
 
@@ -88,7 +91,7 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
         const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
-            console.log("testing")
+            renderUserSelection(obj, "name");
         })
     };
 
@@ -102,7 +105,7 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         })
         const backButton = document.getElementById("backButton");
         backButton.addEventListener("click", function() {
-            console.log("testing")
+            renderUserSelection(obj, "weapon");
         })
     };
 
@@ -121,6 +124,10 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
             })
         };
 
+        $(".icon").click(function() {
+            $(".icon-description").css("background-color", "black")
+            $(this).children(".icon-description").css("background-color", "red");
+        });
     };
 
 }

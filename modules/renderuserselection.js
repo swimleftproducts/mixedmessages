@@ -91,25 +91,6 @@
         const backButton = document.createElement('button');
         backButton.id = "backButton"
 
-        // switch (forWhat) {
-        //     case "weapon":
-        //         backButton.id = "onToLocationSelectionButton"
-        //         currentButton = "onToLocationSelectionButton"
-        //         break;
-        //     case "location":
-
-        //         backButton.id = "onToResultsButton"
-        //         currentButton = "onToResultsButton"
-        //         break;
-        //     case "name":
-        //         backButton.id = "onToWeaponSelectionButton"
-        //         currentButton = "onToWeaponSelectionButton"
-        //         break;
-        //     default:
-        //         backButton.innerHTML = "in default in switch"
-        //         break;
-        // }
-
         backButton.innerHTML = "back button"
         root.appendChild(backButton)
             // logic for setting button event listener

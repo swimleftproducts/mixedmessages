@@ -90,16 +90,16 @@ const gameSetUp = {
 
         if (forWhat === "name") {
             this.stories[this.storyInUse].userSelection[0] = selection;
+            console.log(this.stories[this.storyInUse].userSelection)
         } else if (forWhat === "weapon") {
             this.stories[this.storyInUse].userSelection[1] = selection;
+            console.log(this.stories[this.storyInUse].userSelection)
         } else {
             this.stories[this.storyInUse].userSelection[2] = selection;
+            console.log(this.stories[this.storyInUse].userSelection)
         }
 
     },
-
-    //this method is ran every time the user does a new selection. This
-
 
 }
 export { gameSetUp };

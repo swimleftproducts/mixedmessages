@@ -1,4 +1,4 @@
-import { assignEvents } from './modules/assignevents.js';
+import { assignEvents } from './modules/assignEvents.js';
 
 // assign onclick functions
 assignEvents("startButton");

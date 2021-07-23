@@ -1,21 +1,18 @@
 //this render js file will be called 3 times, first to render location, then weapon then person, general layout is 3 divs 1 that is an image and 2 with text. The image will rotate downward in each render
 
 //import assignevents to set listener on button
-import { assignEvents } from './assignevents.js';
+import { assignEvents } from './assignEvents.js';
 
 export const renderHints = (obj, forWhat, timeThrough) => {
     //lets define an object that defines the page layout for each forWhat 
     if (!timeThrough) {
         timeThrough = 1
-        console.log('timeThrough 1')
     } else if (timeThrough == 1) {
         forWhat = "weapon"
         timeThrough = 2
-        console.log("timeThrough 2")
     } else {
         forWhat = "name"
         timeThrough = 3
-        console.log("timeThrough 3")
     }
 
     const layouts = {
@@ -38,7 +35,7 @@ export const renderHints = (obj, forWhat, timeThrough) => {
     root.appendChild(container)
 
 
-    //the seciton below creates the text and image on page
+    //the section below creates the text and image on page
 
     for (let i = 0; i < 3; i++) {
         // creat key for pulling hints from object
@@ -50,28 +47,30 @@ export const renderHints = (obj, forWhat, timeThrough) => {
         } else {
             element.innerHTML = obj[hintKey]
             element.classList.add("hintdiv")
-        }
+        } 
         // each new elmenet is appeneded onto the container as a child.
         container.appendChild(element)
     }
 
     //build button for selecting next set of options and render next page
     const button = document.createElement('button');
-    console.log(timeThrough)
-
+    const backButton = document.createElement('button');
     if (timeThrough < 3) {
         button.id = "onToHintsButton"
         button.innerHTML = "There is more..."
+        backButton.id = "backButton"
+        backButton.innerHTML = "back button"
 
         root.appendChild(button)
-
-        assignEvents('onToHintsButton', obj, timeThrough)
+        root.appendChild(backButton)
+        assignEvents('onToHintsButton', obj, timeThrough,forWhat)
     } else {
         button.id = "onToSelectionButton"
         button.innerHTML = "Time to make a choice"
-
+        backButton.id = "backButton"
+        backButton.innerHTML = "back button"
         root.appendChild(button)
-
-        assignEvents('onToSelectionButton', obj, timeThrough)
+        root.appendChild(backButton)
+        assignEvents('onToSelectionButton', obj, timeThrough, forWhat)
     }
 }

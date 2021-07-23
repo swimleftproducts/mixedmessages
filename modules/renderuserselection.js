@@ -1,4 +1,4 @@
-    import { assignEvents } from './assignevents.js'
+    import { assignEvents } from './assignEvents.js'
 
     export const renderUserSelection = (obj, forWhat) => {
         const root = document.getElementById("root");
@@ -35,18 +35,29 @@
 
         container.appendChild(hint)
 
-        //creating icons inside of conatiner for showing 
+        //creating icons inside of container for showing 
         //selection options
         for (let i = 0; i < 6; i++) {
-
             const icon = document.createElement('div');
-
             icon.className = 'icon';
-            icon.innerHTML = `<img src="./example.png" width: 50px; height: auto>`
-                //icon.id = `icon${i}`
+            //creating 2 containers within icon. one for images and one for description
+            for (let j = 0; j < 1; j++) {
+                //this is for the image
+                const iconImage = document.createElement('div')
+                iconImage.className = 'icon-image'
+                iconImage.innerHTML = `<img src="${obj.images[forWhat].image[i]}" id="testingImage" />`;
+                icon.appendChild(iconImage);
+                //this is for the description
+                const iconDescription = document.createElement('div');
+                iconDescription.className = 'icon-description';
+                iconDescription.innerHTML = `${obj.images[forWhat].id[i]}`
+                icon.appendChild(iconDescription);
+
+            }
+            // icon.innerHTML = `<img src="${obj.images[forWhat].image[i]}" width: auto; height: 80%>${obj.images[forWhat].id[i]}`
+            //icon.id = `icon${i}`
 
             icon.id = obj.images[forWhat].id[i]
-            console.log(icon.id)
             container.appendChild(icon)
         }
         assignEvents("icon", undefined, undefined, forWhat)
@@ -59,7 +70,6 @@
                 currentButton = "onToLocationSelectionButton"
                 break;
             case "location":
-
                 button.id = "onToResultsButton"
                 currentButton = "onToResultsButton"
                 break;
@@ -76,8 +86,16 @@
         root.appendChild(button)
             // logic for setting button event listener
 
-        assignEvents(currentButton, obj)
+        // assignEvents(currentButton, obj);
 
+        const backButton = document.createElement('button');
+        backButton.id = "backButton"
+
+        backButton.innerHTML = "back button"
+        root.appendChild(backButton)
+            // logic for setting button event listener
+
+        assignEvents(currentButton, obj)
 
 
     }

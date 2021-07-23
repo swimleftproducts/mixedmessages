@@ -63,14 +63,14 @@ nav a:focus {
 main {
     position: relative;
     height: 90vh;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .box {
-    border: 3px lightgreen dotted;
+    /* border: 3px lightgreen dotted; */
     height: 90%;
     width: 85%;
     background-color: white;
@@ -88,9 +88,10 @@ main {
 }
 
 .container {
-    border: 2px aqua dotted;
+    /* border: 2px aqua dotted;*/
+    outline: 1px red solid;
     width: 100%;
-    height: 90%;
+    height: 95%;
     color: black;
     display: inline-flex;
     flex-wrap: wrap;
@@ -107,13 +108,42 @@ main {
     height: 7rem;
     width: 7rem;
     background-color: white;
+    /* overflow: hidden; */
+    /* outline: 1px aqua solid; */
+}
+
+.icon-image {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
     filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(102, 102, 102));
+    /* outline: 1px solid green; */
+}
+
+.icon-image img {
+    width: 100%;
+    height: 100%;
     border-radius: 1rem;
-    overflow: scroll;
+}
+
+.icon-description {
+    position: relative;
+    display: inline;
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+    top: -0.5rem;
+    left: 1.8rem;
+    color: white;
+    background-color: black;
+    border-radius: 0.3rem;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(102, 102, 102));
+    /* outline: 1px solid purple; */
 }
 
 .hint {
-    border: 2px violet solid;
+    /*border: 2px violet solid;*/
     width: 100%;
     height: 5vh;
     display: flex;
@@ -121,11 +151,34 @@ main {
     justify-content: center;
 }
 
-.icon img {}
+.introImage {
+    width: 70% !important;
+    height: auto;
+}
+
+.results {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results img {
+    width: 80%;
+    height: 8rem;
+    ;
+}
+
+.resultContainer {
+    width: 100%;
+    color: black;
+}
 
 @media only screen and (min-width: 800px) {
     .container.hints {
-        border: 2px rgb(190, 44, 159) solid;
+        /*border: 2px rgb(190, 44, 159) solid;*/
         width: 100%;
         height: 90%;
         color: black;
@@ -144,8 +197,8 @@ main {
         position: absolute;
         left: 0px;
         top: 50px;
-        width: 100%;
-        height: auto;
+        width: auto;
+        height: 65vh;
         float: left;
         z-index: 0;
     }
@@ -158,5 +211,21 @@ main {
         height: 300px; */
         border: 2px black solid;
         background-color: rgb(127, 109, 207);
+    }
+    .results {
+        width: 100%;
+        height: auto;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .results img {
+        width: 40%;
+        height: 15rem;
+    }
+    .icon-box {
+        height: 10rem;
+        width: 10rem;
     }
 }

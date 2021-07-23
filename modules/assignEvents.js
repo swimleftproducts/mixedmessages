@@ -4,7 +4,7 @@ import { renderUserSelection } from './renderuserselection.js';
 import { renderHints } from './renderhintspages.js'
 import { renderResults } from './renderresults.js'
 
-// this function assigns the event listeners and defines what functions they call. It takes is a name and then assigns functions according to that name this is done so that we can assign events for elements that do not get created untill later in the game. This approach is nice because we can keep ALL event assignment functionality in here.
+// this functivon assigns the event listeners and defines what functions they call. It takes is a name and then assigns functions according to that name this is done so that we can assign events for elements that do not get created until later in the game. This approach is nice because we can keep ALL event assignment functionality in here.
 
 
 export function assignEvents(name, obj, timeThrough, forWhat) {
@@ -26,7 +26,26 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         const button = document.getElementById("onToHintsButton");
         button.addEventListener("click", function() {
             renderHints(obj, "location", timeThrough);
-        })
+        });
+        const backButton = document.getElementById("backButton");
+        if (backButton) {
+            backButton.addEventListener("click", function() {
+                console.log(forWhat)
+
+                //location weapon name
+                if (forWhat === "weapon") {
+
+                    renderHints(obj, "location", !timeThrough);
+                } else {
+                    renderIntro(obj)
+                }
+
+                //renderIntro(obj)
+
+            });
+        }
+
+
     };
 
 
@@ -37,6 +56,13 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         button.addEventListener("click", function() {
             renderUserSelection(obj, "name");
         })
+        const backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function() {
+            console.log('in last back button')
+            if (forWhat === "name") {
+                renderHints(obj, "weapon", 1);
+            }
+        });
     };
 
 
@@ -48,6 +74,10 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderUserSelection(obj, "weapon");
         })
+        const backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function() {
+            renderHints(obj, "weapon", 2);
+        })
     };
 
     // this if statement sets listeners for the button to move into user selection for Weapons
@@ -57,6 +87,11 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
         button.addEventListener("click", function() {
 
             renderUserSelection(obj, "location");
+        })
+
+        const backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function() {
+            renderUserSelection(obj, "name");
         })
     };
 
@@ -68,27 +103,31 @@ export function assignEvents(name, obj, timeThrough, forWhat) {
 
             renderResults(obj);
         })
+        const backButton = document.getElementById("backButton");
+        backButton.addEventListener("click", function() {
+            renderUserSelection(obj, "weapon");
+        })
     };
 
     //set listener on the icons for setting user values
     if (name === "icon") {
         const icon = document.getElementsByClassName("icon");
-        console.log(icon)
+
         for (let i = 0; i < icon.length; i++) {
             icon[i].addEventListener("click", function(event) {
-                //console.log('selected input ' + event.target.id);
-                //adding the selected inputs to the userSelection list from storylines.js
-                // gameSetUp.stories[0].userSelection.push(event.target.id)
-                // console.log(gameSetUp.stories[0].userSelection)
 
                 // call method inside of story object to take in user input
                 gameSetUp.userSelection(event, forWhat);
                 // make sure user input only gets entered once into array
-                gameSetUp.checkUserInput();
+                // gameSetUp.checkUserInput();
 
             })
         };
 
+        $(".icon").click(function() {
+            $(".icon-description").css("background-color", "black")
+            $(this).children(".icon-description").css("background-color", "red");
+        });
     };
 
 }

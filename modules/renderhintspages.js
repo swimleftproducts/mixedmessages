@@ -39,7 +39,7 @@ export const renderHints = (obj, forWhat, timeThrough) => {
 
     for (let i = 0; i < 3; i++) {
         // creat key for pulling hints from object
-        let hintKey = forWhat + 'HintLong'
+        let hintKey = forWhat + 'HintLong1'
         const element = document.createElement('div');
         if (layouts[forWhat][i] === "img") {
 

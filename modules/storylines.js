@@ -30,11 +30,11 @@ const gameSetUp = {
             name: "bruce",
             nameImage: "./BruceWayne.jpg",
             weaponHint: "Capow, not bang",
-            weaponHintLong: "According to the GPD, they found a mysterious and a piece of dark cloth that along the side of the road. The GPD also said that the cloth was made of a very high quality material.",
+            weaponHintLong1: "According to the GPD, they found a mysterious and a piece of dark cloth that along the side of the road. The GPD also said that the cloth was made of a very high quality material.",
             locationHint: "worse than new york",
-            locationHintLong: "There is a rumor that 3 blocks from the crime scene, there is a person who might know the killer. Rumor also said that the person can be found in the 11th floor of the tallest building in the city.",
+            locationHintLong1: "There is a rumor that 3 blocks from the crime scene, there is a person who might know the killer. Rumor also said that the person can be found in the 11th floor of the tallest building in the city.",
             nameHint: "wayne enterprises CEO",
-            nameHintLong: "There was a fallen card right next to the garbage. It was wet and was not readable but it seems there is a logo on the right top corner of card.",
+            nameHintLong1: "There was a fallen card right next to the garbage. It was wet and was not readable but it seems there is a logo on the right top corner of card.",
             game: 0,
             cheat: () => {
 
@@ -45,37 +45,66 @@ const gameSetUp = {
         },
         {
             id: "2",
-            background2: "With this man keeping a watch, there is no future for the  honest hardworking criminal",
-            weapon: "fists",
-            location: "gotham",
-            name: "bruce",
-            weaponHint: "capow, not bang",
-            weaponHintLong: "weapon Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-            locationHint: "worse than new york",
-            locationHintLong: "location Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, .",
-            nameHint: "wayne enterprises CEO",
-            nameHintLong: "name Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ",
+            title: "The Shire",
+            background1: "The shire needs your help in finding the creature that is terrorizing the hobbits. Luckily, each attack has resulted in hints left behind...",
+            introImage: "./assets/2/introimage.png",
+            hintImage: "./assets/2/hintimage.jpeg",
+            images: {
+                weapon: {
+                    image: ['./assets/2/weaponimages/1.jpeg', './assets/2/weaponimages/2.jpeg', './assets/2/weaponimages/3.jpeg', './assets/2/glamdring.jpeg', './assets/2/weaponimages/5.jpeg', './assets/2/weaponimages/6.jpeg'],
+                    id: ['orc Axe', 'fists', 'sword', 'Glamdring', 'spell', 'elvish dagger']
+                },
+                name: {
+                    image: ['./assets/2/nameimages/1.png', './assets/2/nameimages/1.png', './assets/2/nameimages/1.png', './assets/2/nameimages/1.png', './assets/2/nazgul.jpeg', './assets/2/nameimages/1.png' ],
+                    id: ['goblin', 'orc', 'Sam', 'Gladriel', 'Nazgul', 'Bilbo']
+                },
+                location: {
+                    image: ['./assets/2/locationimages/1.png', './assets/2/locationimages/1.png', './assets/2/hobbiton.jpeg', './assets/2/locationimages/1.png', './assets/2/locationimages/1.png', './assets/2/locationimages/1.png' ],
+                    id: ['Anduin River', 'Moria', 'Hobbiton', 'Fargorn', 'Isengard', 'Mirkwood']
+                },
+
+            },
+
+            background2: ``,
+            weapon: "Glamdring",
+            weaponImage: "./assets/2/glamdring.jpeg",
+            location: "Hobbiton",
+            locationImage: "./assets/2/hobbiton.jpeg",
+            name: "Nazgul",
+            nameImage: "./assets/2/nazgul.jpeg",
+            weaponHint: "Powerful Weapon",
+            weaponHintLong1: "This weapon was build by elvish hands",
+            weaponHintLong2:"Later it was wield by Gandolf. How did the killer get it?",
+            locationHint: "A basic place",
+            locationHintLong1: "There is a rummor that the town where the killings took place is a main town in the shire .",
+            locationHintLong1: "Sam Gamgee was particularlly attentive to healing this area with soil from Galadriel",
+            nameHint: "An evil spirit",
+            nameHintLong1: "The killer was one of the nine",
+            nameHintLong2: "Whos voice strikes fear into mortals",
             game: 0,
             cheat: () => {
 
             },
+            // location, weapon then name
+
+            userSelection: [], 
         },
     ],
 
 
-    storyInUse: 4,
+    storyInUse: null,
 
 
 
     // this method chooses what story to use
     choose: function() {
         // pick random story, the random is removed for now
-        // const num = Math.floor(Math.random() * this.stories.length)
-
-        let num = 0
+        const num = Math.floor(Math.random() * this.stories.length)
+        console.log(num)
+       // let num = 1
             // this methhod returns a random story the story
         this.storyInUse = num
-        return this.stories[0];
+        return this.stories[num];
 
     },
 

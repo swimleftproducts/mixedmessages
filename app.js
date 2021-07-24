@@ -8,5 +8,7 @@ $(".logo").click(function() {
 
 $(".menu").click(function(){
     $(this).hide()
-    $("nav ul").css("display", "block")
+    $("nav ul").fadeIn("slow", function() {
+        $(this).css("display", "block")
+    })
 })

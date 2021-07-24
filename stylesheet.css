@@ -36,11 +36,13 @@ nav {
 
 nav ul {
     list-style-type: none;
+    /* position: absolute; */
+    display: none;
 }
 
 nav li {
     font-size: 1rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 nav li a,
@@ -54,6 +56,10 @@ nav a:focus {
 
 .logo {
     width: 70px;
+}
+
+.menu {
+    width: 50px;
 }
 
 .title {
@@ -227,5 +233,14 @@ main {
     .icon-box {
         height: 10rem;
         width: 10rem;
+    }
+
+    nav ul {
+        display: inline-flex;
+        position: relative;
+    }
+
+    .menu {
+        display: none;
     }
 }
